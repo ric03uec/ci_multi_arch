@@ -16,5 +16,8 @@ build:
   ci:
     - uname -a
     - node --version
+    # These variables are being set by Shippable build runner
     - echo $SHIPPABLE_NODE_ARCHITECTURE
     - echo $SHIPPABLE_NODE_OPERATING_SYSTEM
+    # This variable is set by the matrix section of yml
+    - echo $NODE_ARCH
